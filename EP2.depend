@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1487476398 source:c:\users\ewerton\desktop\ep2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
+1487476336 c:\users\ewerton\desktop\ep2\pilha.h
+
+1487467455 source:c:\users\ewerton\desktop\ep2\pilha.c
+
