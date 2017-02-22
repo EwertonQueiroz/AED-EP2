@@ -9,40 +9,50 @@
 #include <stdlib.h>
 #include "pilha.h"
 
-struct Pilha {
-    int qtd;
-    struct Coordenada coords[MAX];
-};
+// Pilha indexada de 0 a 999 (MAX - 1).
+Ponto pilha[MAX];
 
-Pilha * criar_pilha () {
-    Pilha *pi;
+// Variável estática para que não possa ser acessada e/ou modificada fora deste módulo.
+static int topo;
 
-    pi = (Pilha *) malloc(sizeof (struct Pilha));
-
-    if (pi != NULL) {
-        pi->qtd = 0;
-    }
-
-    return pi;
+void pilha_iniciar () {
+    topo = -1;
 }
 
-void liberar_pilha (Pilha *pi) {
-    free(pi);
+// Função estática para que não seja acessada fora deste módulo.
+static int pilha_vazia () {
+    if (topo == -1)
+        return 1;
+
+    else
+        return 0;
 }
 
-int verificar_tamanho_pilha (Pilha *pi) {
-    if (pi == NULL) {
-        return -1;
-    }
-    else {
-        return pi->qtd;
-    }
+// Função estática para que não seja acessada fora deste módulo.
+static int pilha_cheia () {
+    if (topo == MAX - 1)
+        return 1;
+
+    else
+        return 0;
 }
 
-int verificar_pilha_cheia (Pilha *pi) {
-    if (pilha->valor == )
+int pilha_tamanho () {
+    return topo + 1;
 }
 
-void push (TNo *pilha) {
-    pilha[t++] = y;
+void push (Ponto p) {
+    if (!pilha_cheia ())
+        pilha[topo++] = p;
+
+    else
+        printf("\nPilha cheia.\n");
+}
+
+Ponto pop () {
+    if (!pilha_vazia ())
+        return pilha[--topo];
+
+    else
+        printf("\nPilha vazia.\n");
 }

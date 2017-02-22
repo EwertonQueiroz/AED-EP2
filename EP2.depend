@@ -8,3 +8,14 @@
 
 1487467455 source:c:\users\ewerton\desktop\ep2\pilha.c
 
+1487783278 source:c:\users\ewerton\workspace\c\ep2\pilha.c
+	<stdlib.h>
+	"pilha.h"
+
+1487782155 c:\users\ewerton\workspace\c\ep2\pilha.h
+
+1487783397 source:c:\users\ewerton\workspace\c\ep2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
